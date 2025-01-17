@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    </head>
+    <body>
+        <h1> главный шаблон индекс </h1>
+        <h4>
+            <!-- <a href="/myapp/item/{{item.id}}/">-->
+            {% for item in items  %}
+            <a href="{% url 'myapp:detail' item.id %}">
+                Название {{item.name}} | {{item.price}} | {{item.description}}
+            </a>
+            <br>
+            {% endfor %}
+        </h4>
+    </body>
+</html>
