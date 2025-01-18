@@ -3,12 +3,23 @@
     <head>
         <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
     </head>
-    <body class="bg-sky-500">
-        <h1> главный шаблон индекс </h1>
+    <body>
+        <nav>
+          <div>
+            <div>
+              <div>
+                <div class="flex">
+                  <img class="h-8" src="{% static 'myapp/images/shop.png' %}" />
+                  <span class="text-xl">Shop Ai</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
         <h4>
             <!-- <a href="/myapp/item/{{item.id}}/">-->
             {% for item in items  %}
-            <a href="{% url 'myapp:detail' item.id %}">
+            <a href="{% url 'myapp:detail' item.id %}" alt="logo">
                 Название {{item.name}} | {{item.price}} | {{item.description}}
             </a>
             <br>
