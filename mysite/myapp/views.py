@@ -15,3 +15,6 @@ def indexItem(request, productId):
         'item':item
     }
     return render(request, 'myapp/detail.html', context)
+
+def test(request):
+    return HttpResponse('aaaaaaa')
