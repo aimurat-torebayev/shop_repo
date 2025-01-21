@@ -4,7 +4,8 @@
     <!-- <a href="/myapp/item/{{item.id}}/">-->
     {% for item in items  %}
     <a href="{% url 'myapp:detail' item.id %}" alt="logo">
-        Название {{item.name}} | {{item.price}} | {{item.description}}
+        Название {{item.name}} | {{item.price}} | {{item.description}} <br>
+        <image src="{{item.image.url}}" alt="">
     </a>
     <br>
     {% endfor %}
