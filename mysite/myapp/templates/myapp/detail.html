@@ -8,6 +8,12 @@
     <p class="mt-5">{{ item.name }}</p>
     <p class="mt-5 text-green-500">$ {{ item.price | intcomma }}</p>
     <p class="mt-5 text-gray-500">{{ item.description }}</p>
+    <a href="{% url 'myapp:update_item' item.id %}" class="bg-green-500 text-white mt-[50px] inline-block">
+      Обновить запись
+    </a>
+    <a href="{% url 'myapp:delete_item' item.id %}" class="bg-red-500 text-white mt-[50px] inline-block">
+      Удалить запись
+    </a>
   </div>
 </div>
 
